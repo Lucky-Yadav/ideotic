@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+}
+
+.div {
+  margin: 12px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.logingif {
+  max-width: 100px;
+  border-radius: 60%;
+}
+.signupgif {
+  max-width: 80px;
+}
+.processing img{
+  max-width: 50px;
+  padding: 2px;
+  border-radius: 5px;
+}
+.registration {
+  display: flex;
+  gap: 20px;
+}
+.homedata {
+  display: grid;
+ grid-template-columns: 5fr 1fr;
+}
+.data {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.hidden {
+  display: none;
+}
+.dogimage img{
+  max-width: 250px;
+  position: absolute;
+}
+.right {
+  max-height: 100vh;
+  position: fixed;
+  right: 2%;
+  top: max(100px, 20%);
+}
+.wait {
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+.dogimageb {
+  margin-top: 10%;
+}
+.dogimagec {
+  max-width: 300px;
+  border-radius: 3px;
+}
+
+@media (max-width: 1570px) {
+  .data {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .dogimagec {
+    max-width: 250px;
+  }
+}
+@media (max-width: 1270px) {
+  .data {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dogimagec {
+    max-width: 250px;
+  }
+  .homedata {
+   grid-template-columns: 3fr 1fr;
+  }
+}
+@media (max-width: 1070px) { 
+  .homedata {
+   grid-template-columns: 2fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dogimagec {
+    max-width: 225px;
+  }
+  .homedata {
+    display: grid;
+   grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 700px) { 
+  .homedata {
+   grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) { 
+  .homedata {
+    grid-template-columns: 1fr;
+   }
+  .right {
+    max-height: 300px;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+  }
+  .data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wait {
+    width: 50%;
+    margin-top: 5%;
+    margin-right: 50%;
+  }
+  .home {
+    margin-top: 50%;
+  }
+  .dogimagec {
+    max-height: 200px;
+    border-radius: 3px;
+  }
+}
