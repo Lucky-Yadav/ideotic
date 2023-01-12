@@ -22,7 +22,7 @@ const Navbar = () => {
       setisprocessing(true);
       axios({
         method: "post",
-        url: "http://localhost:3070/users/signin",
+        url: "https://ideotic-backend-gilt.vercel.app/users/signin",
         data: logindata,
       }).then((res) => {
         dispatch(sucessLogin(res.data));
