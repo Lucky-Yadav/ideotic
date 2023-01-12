@@ -1,13 +1,19 @@
 Ideotic
 This is an assignment for Ideotic.
 
-Deployed Application
+// Deployed Application //
 To start the deployed application:
 
 1. Install the Redux DevTools Extension in your browser (Link:-https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en ).
 2. Once the extension is installed, you can view the live project at https://ideotic-assignment-nu.vercel.app/ Note that the extension must be installed in your browser to view the project properly.
-3. login default email:- admin123@gmail.com
-4. default pass:- admin@123
+
+
+
+// Credentials for Admin Panel //
+    Admin email I'd for login:- admin123@gmail.com
+    Admin Password:- admin@123
+    
+
 
 // Running Locally //
 To use the application locally:
