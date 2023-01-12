@@ -7,16 +7,18 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 
+// Create a root element in the DOM
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Render the application inside the root element
 root.render(
   <BrowserRouter>
+    {/* Provider component is used to provide the store to the entire application */}
     <Provider store={store}>
       <App />
     </Provider>
   </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Report web vitals
 reportWebVitals();

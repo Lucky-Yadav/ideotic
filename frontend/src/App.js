@@ -10,8 +10,10 @@ import Signup from "./components/Signup";
 const App = () => {
   return (
     <div className="App">
+      {/* Navbar Component */}
       <Navbar />
       <Routes>
+        {/* Route for Home Component, Wrapped with Private Component for Authentication */}
         <Route
           path="/"
           element={
@@ -20,7 +22,9 @@ const App = () => {
             </Private>
           }
         ></Route>
+        {/* Route for Login Component */}
         <Route path="/login" element={<Login />}></Route>
+        {/* Route for Signup Component */}
         <Route path="/Signup" element={<Signup />}></Route>
       </Routes>
     </div>

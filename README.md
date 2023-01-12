@@ -1,13 +1,16 @@
-# ideotic
- Ideotic Assignment
+Ideotic
+This is an assignment for Ideotic.
 
- Steps to start Deployed Application 
+Deployed Application
+To start the deployed application:
 
- 1. Install Redux Dev Tools Extension in Browser link:- https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en 
+1. Install the Redux DevTools Extension in your browser (Link:-https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en ).
+2. Once the extension is installed, you can view the live project at https://ideotic-assignment-nu.vercel.app/ Note that the extension must be installed in your browser to view the project properly.
 
- 2. After Adding Extension you can see live project on https://ideotic-assignment-nu.vercel.app/ Must have above extension installed in browser.
+// Running Locally //
+To use the application locally:
 
-// To use Locally
+1. Clone the repository and run npm i in the terminal to install the dependencies.
+2. The backend is deployed on Vercel, to use it locally you need to change the routes in the login, signup and navbar components.
+Start the server using nodemon for local use.
 
- 1. Clone Repository and run "npm i" in terminal to start app locally.
- 2. Backend is deployed on vercel to use locally change the routes in login, signup and navbar components.

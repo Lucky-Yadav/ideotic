@@ -15,7 +15,10 @@ import processinggif from "../images/processing.gif";
 import { useState } from "react";
 
 const Navbar = () => {
+  // useState hook to keep track of the processing state
   const [isprocessing, setisprocessing] = useState(false);
+
+  // useEffect hook to check for login data in localStorage
   useEffect(() => {
     let logindata = JSON.parse(localStorage.getItem("logindata"));
     if (logindata) {
@@ -32,15 +35,19 @@ const Navbar = () => {
     }
   }, []);
 
+  // useSelector hook to get the token from the Redux store
   const token = useSelector((state) => state.auth.token);
 
   const dispatch = useDispatch();
+
+  // function to handle logout button click
   const handlelogout = () => {
     setisprocessing(true);
     localStorage.removeItem("logindata");
     dispatch(logoutsuccess());
     setisprocessing(false);
   };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">

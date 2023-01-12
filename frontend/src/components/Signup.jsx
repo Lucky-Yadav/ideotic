@@ -8,21 +8,20 @@ import { useDispatch } from "react-redux";
 import { loginloading, sucessLogin } from "../store/auth/action";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-// import { LOGIN_LOADING } from "../store/auth/actiontype";
-// import { AuthContext } from "../context/AuthContext";
 
 const Signup = () => {
+  // import the token from the redux store
   const token = useSelector((state) => state.auth.token);
+  // import the useDispatch hook
   const dispatch = useDispatch();
+  // useState hook to keep track of the login form data
   const [loginData, setloginData] = useState({
     username: "",
     email: "",
     password: "",
   });
-  // const handlelogout = () => {
-  //   dispatch(logoutsuccess());
-  // };
 
+  // function to handle changes on the input fields
   const handlechange = (e) => {
     const { name, value } = e.target;
     setloginData((prev) => ({
@@ -31,20 +30,25 @@ const Signup = () => {
     }));
   };
 
+  // function to handle login
   const handlelogin = () => {
-    //  console.log(2);
+    // call the loginloading action
     dispatch(loginloading());
+    // make a post request to the server
     axios({
       method: "post",
       url: "https://ideotic-backend-gilt.vercel.app/users/signup",
       data: loginData,
     }).then((res) => {
+      // call the sucessLogin action and pass the token as an argument
       dispatch(sucessLogin(res.data.token));
     });
   };
+  // if the token exists, navigate to the homepage
   if (token) {
     return <Navigate to={"/"} />;
   }
+  // render the login form and the login button
   return (
     <div>
       <div className="div">
@@ -69,7 +73,7 @@ const Signup = () => {
           variant="contained"
           endIcon={<SendIcon />}
         >
-          {token ? "log out" : "log in"}
+          {token ? "log out" : "Sign up"}
         </Button>
       </div>
     </div>
