@@ -7,7 +7,7 @@ const SECRET_KEY = "Secret_key";
 const signup = async (req, res) => {
   // destructuring the request body
   const { username, email, password } = req.body;
-
+  console.log(email);
   try {
     // check if the user already exists
     const existinguser = await userModel.findOne({ email: email });
@@ -28,6 +28,7 @@ const signup = async (req, res) => {
     // create a JWT token
     const token = jwt.sign({ email: result.email, id: result._id }, SECRET_KEY);
     // return the created user and the token
+    console.log(email, username, password);
     res.status(201).json({ user: result, token: token });
   } catch (error) {
     console.log(error);
